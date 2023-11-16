@@ -14,3 +14,14 @@ for x in range(0, len(lines)):
     else:
         cals[i] += int(lines[x])
 print("Part 1: " + str(max(cals)))
+
+# Part 2
+top_three = 0
+j = 0
+
+while j < 3:
+    top_three += max(cals)
+    cals.remove(max(cals))
+    j += 1
+
+print("Part 2: " + str(top_three))
