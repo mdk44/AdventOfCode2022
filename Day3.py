@@ -17,3 +17,16 @@ for line in lines:
                 cur_val = ord(comp1[i]) - 38
     sum += cur_val
 print("Part 1: " + str(sum))
+
+# Part 2
+sum = 0
+cur_val = 0
+for x in range(0, len(lines), 3):
+    for i in range(0, len(lines[x])):
+        if lines[x][i] in lines[x + 1] and lines[x][i] in lines[x + 2]:
+            if lines[x][i] == lines[x][i].lower():
+                cur_val = ord(lines[x][i]) - 96
+            else:
+                cur_val = ord(lines[x][i]) - 38
+    sum += cur_val
+print("Part 2: " + str(sum))
