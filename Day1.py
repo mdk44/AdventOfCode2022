@@ -25,3 +25,5 @@ while j < 3:
     j += 1
 
 print("Part 2: " + str(top_three))
+
+# adding comment to lazily fix the commit message
