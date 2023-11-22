@@ -22,3 +22,18 @@ for line in lines:
         sum += 1
 
 print("Part 1: " + str(sum))
+
+# Part 2
+sum = 0
+for line in lines:
+    x1, x2, y1, y2 = parse_line(line)
+    if x1 >= y1 and x1 <= y2:
+        sum += 1
+    elif y1 >= x1 and y1 <= x2:
+        sum += 1
+    elif x2 >= y1 and x2 <= y2:
+        sum += 1
+    elif y2 >= x1 and y2 <= x2:
+        sum += 1
+
+print("Part 2: " + str(sum))
